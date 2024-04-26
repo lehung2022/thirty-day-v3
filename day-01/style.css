@@ -1,0 +1,78 @@
+/* Reset default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0; /* Fallback color in case background image doesn't load */
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container for drum kit */
+.keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 80%; /* Adjust max-width as needed */
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual drum pad */
+.key {
+  flex: 1 0 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.1s ease;
+}
+
+/* Hover effect for drum pad */
+.key:hover {
+  transform: scale(1.1);
+}
+
+/* Key label */
+kbd {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Sound name */
+.sound {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Highlight effect when drum pad is triggered */
+.playing {
+  transform: scale(1.1);
+  border-color: #ffcc00;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Vertical arrangement on smaller screens */
+  .keys {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+  .key {
+    width: 80%; /* Adjust width based on desired spacing */
+    margin: 10px 0; /* Adjust vertical margin */
+  }
+}
